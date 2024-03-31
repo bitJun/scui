@@ -4,28 +4,66 @@
 // routes 显示在左侧菜单中的路由(显示顺序在动态路由之前)
 // 示例如下
 
-// const routes = [
-// 	{
-// 		name: "demo",
-// 		path: "/demo",
-// 		meta: {
-// 			icon: "el-icon-eleme-filled",
-// 			title: "演示",
-// 			role: ["SA"]
-// 		},
-// 		children: [{
-// 			name: "demopage",
-// 			path: "/demopage",
-// 			component: "test/autocode/index",
-// 			meta: {
-// 				icon: "el-icon-menu",
-// 				title: "演示页面",
-// 				role: ["SA"]
-// 			}
-// 		}]
-// 	}
-// ]
+const routes = [
+	{
+		name: "dashboards",
+		path: "/dashboards",
+		meta: {
+			icon: "el-icon-eleme-filled",
+			title: "驾驶舱",
+			role: ["SA"]
+		},
+		children: [{
+			name: "dashboards",
+			path: "/dashboards",
+			component: "dashboard/index",
+			meta: {
+				icon: "el-icon-menu",
+				title: "驾驶舱",
+				role: ["SA"]
+			}
+		}]
+	},
+	{
+		name: "order",
+		path: "/order",
+		meta: {
+			icon: "el-icon-eleme-filled",
+			title: "订单",
+			role: ["SA"]
+		},
+		children: [{
+			name: "purchase",
+			path: "/purchase",
+			component: "order/purchase/index",
+			meta: {
+				icon: "el-icon-menu",
+				title: "采购订单",
+				role: ["SA"]
+			}
+		}]
+	},
+	{
+		name: "product",
+		path: "/product",
+		meta: {
+			icon: "el-icon-eleme-filled",
+			title: "产品",
+			role: ["SA"]
+		},
+		children: [{
+			name: "product",
+			path: "/product",
+			component: "product/list/index",
+			meta: {
+				icon: "el-icon-menu",
+				title: "产品中心",
+				role: ["SA"]
+			}
+		}]
+	}
+]
 
-const routes = []
+// const routes = []
 
 export default routes;
