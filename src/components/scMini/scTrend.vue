@@ -9,12 +9,12 @@
 
 <template>
 	<span class="sc-trend" :class="'sc-trend--'+type">
-		<el-icon v-if="iconType=='P'" class="sc-trend-icon"><el-icon-top /></el-icon>
-		<el-icon v-if="iconType=='N'" class="sc-trend-icon"><el-icon-bottom /></el-icon>
-		<el-icon v-if="iconType=='Z'" class="sc-trend-icon"><el-icon-right /></el-icon>
 		<em class="sc-trend-prefix">{{prefix}}</em>
 		<em class="sc-trend-value">{{modelValue}}</em>
 		<em class="sc-trend-suffix">{{suffix}}</em>
+		<el-icon v-if="iconType=='P'" class="sc-trend-icon"><el-icon-top /></el-icon>
+		<el-icon v-if="iconType=='N'" class="sc-trend-icon"><el-icon-bottom /></el-icon>
+		<el-icon v-if="iconType=='Z'" class="sc-trend-icon"><el-icon-right /></el-icon>
 	</span>
 </template>
 
@@ -57,7 +57,12 @@
 <style scoped>
 	.sc-trend {display: flex;align-items: center;}
 	.sc-trend-icon {margin-right: 2px;}
-	.sc-trend em {font-style: normal;}
+	.sc-trend em {
+		font-style: normal;
+		font-size: 20px;
+		margin-left: 8px;
+		font-weight: 600;
+	}
 	.sc-trend-prefix {margin-right: 2px;}
 	.sc-trend-suffix {margin-left: 2px;}
 	.sc-trend--P {color: #f56c6c;}

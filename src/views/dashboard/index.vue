@@ -1,10 +1,12 @@
 <template>
 	<el-main>
-		<div>123</div>
+		<Statistic />
+		<Sale />
 	</el-main>
 </template>
 <script setup>
-// import { ref, reactive, onMounted  } from "vue"
+import Statistic from './components/statistic';
+import Sale from './components/sale';
 
 </script>
 <style>
